@@ -1,0 +1,17 @@
+
+
+<div class="container">
+  <h3>Deck Info: <%= @deck.title %></h3>
+
+  <p><%= @deck.description %></p>
+
+  <p>Question: <%= @card.question %></p>
+
+  <form action='/deck/<%= @deck.id %>/card/<%= @card.id  %>/result' method="post">
+    <label name="guess">Guess: </label>
+    <input type="text" name="guess" value="• • •">
+  </form>
+
+
+
+</div>
