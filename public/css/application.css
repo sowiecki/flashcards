@@ -17,6 +17,10 @@ h1 {
   font-family: Impact;
   text-align: center;
 }
+h3 {
+  margin: 10px;
+  color: #6DC5D6;
+}
 form {
   width: 260px;
   margin: 2px;
@@ -32,14 +36,28 @@ input {
 th {
   text-align: left;
 }
-.box {
+.box, .login_box, .deck_box {
+  margin: 0 auto auto;
+  padding: 0px 20px 0px 20px;
+  border-radius: 8px;
+  background: #72e58b;
+  box-shadow: 10px;
+}
+.login_box {
   margin: 0 auto auto;
   width: 300px;
   height: 200px;
   text-align: center;
   padding: 0px 20px 0px 20px;
   border-radius: 8px;
-  background: #72e58b;
+}
+.deck_box {
+  margin: 0 auto auto;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  border-radius: 8px;
 }
 .button1, .button2, .button3 {
   margin: 6px;
