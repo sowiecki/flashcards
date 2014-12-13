@@ -1,0 +1,8 @@
+<div class="container">
+<p> Welcome, <%= @user.name %></p>
+<ul>
+  <% @decks.each do |deck| %>
+  <li><a href='/deck/<%= deck.id%>'><%= deck.title %></a></li>
+  <% end %>
+</ul>
+</div>
