@@ -1,10 +1,12 @@
 
 <div class="container">
   <p>Question: <%= @card.question %></p>
+  <div class="reg_box">
   <form action='/deck/<%= @deck.id %>/card/<%= @card.id %>/guess' method='post'>
     <input type='text' name='guess' placeholder='Answer'>
-    <input type='submit' value='Guess'>
+    <input class='button1' type='submit' value='Guess'>
   </form>
+  <div>
   <%= session[:user].name %>
 <ul>
 

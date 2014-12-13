@@ -1,9 +1,10 @@
 <div class="container">
-  <p> You've chosen the <%= @deck.title %> deck.<p>
-
+  <h3> You've chosen the <%= @deck.title %> deck.</h3>
+  <div class="reg_box">
   <form action='/deck/<%= @deck.id %>/card/<%= @card.id %>' method='get'>
-    <input type='submit' value='Play'>
+    <input class='button3' type='submit' value='Play'>
   </form>
+</div>
 <ul>
   <% session[:cards].each do |card| %>
     <li> <%= card.question %> </li>
