@@ -1,0 +1,16 @@
+
+<div class="container">
+  <p> You guessed "<%= @guess.guess.downcase %>" in response to <%= @card.question %>.<p>
+
+  <% if @guess.status %>
+    <h1>Correct!</h1>
+  <% else %>
+    <h1>Incorrect!</h1>
+    <p>The correct answer was <%= @card.answer %></p>
+  <% end %>
+
+
+  <form action='/' method='get'>
+    <input type='submit' value='Next Question'>
+  </form>
+</div>
