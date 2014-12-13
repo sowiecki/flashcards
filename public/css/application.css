@@ -17,6 +17,13 @@ h1 {
   font-family: Impact;
   text-align: center;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
 h3 {
   margin: 10px;
   color: #6DC5D6;
@@ -36,6 +43,13 @@ input {
 th {
   text-align: left;
 }
+
+.deck_link {
+  font-size: 24px;
+  line-height: 40px;
+  color: #FF9C59;
+}
+
 .box, .login_box, .deck_box {
   margin: 0 auto auto;
   padding: 0px 20px 0px 20px;
@@ -51,6 +65,16 @@ th {
   padding: 0px 20px 0px 20px;
   border-radius: 8px;
 }
+
+.reg_box {
+  margin: 0 auto auto;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+  border-radius: 8px;
+}
+
 .deck_box {
   margin: 0 auto auto;
   width: 600px;
@@ -59,7 +83,9 @@ th {
   padding: 20px 20px 20px 20px;
   border-radius: 8px;
 }
-.button1, .button2, .button3 {
+
+.button1, .button2, .button3, .button4 {
+
   margin: 6px;
   font-size: 30px;
   width: 140px;
@@ -71,6 +97,14 @@ th {
 .button2 {
   font-size: 14px;
 }
+
+
+.button4 {
+  font-size: 14px;
+  background-color: #FF9C59;
+}
+
+
 #wrapper {
   min-height:94%;
   text-align: center;
