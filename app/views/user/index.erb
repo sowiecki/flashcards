@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>User Landing Page</h1>
+  Welcome <%= "#{@user.name}" %>
+  <h2>List of all decks:</h2>
+  <% @decks.each do |deck| %>
+  <a href = '/deck/<%= deck.id %>'><%= deck.title %></a>
+  <br>
+  <% end %>
+<!-- BACKLOGGED! <h2>History of games played</h2> -->
+</div>

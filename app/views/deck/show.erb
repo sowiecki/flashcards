@@ -1,0 +1,12 @@
+<div class="container">
+  <p> You've chosen the <%= @deck.title %> deck.<p>
+
+  <form action='/deck/<%= @deck.id %>/card/<%= @card.id %>' method='get'>
+    <input type='submit' value='Play'>
+  </form>
+<ul>
+  <% session[:cards].each do |card| %>
+    <li> <%= card.question %> </li>
+  <% end %>
+</ul>
+</div>

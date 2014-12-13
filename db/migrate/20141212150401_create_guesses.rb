@@ -4,8 +4,8 @@ class CreateGuesses < ActiveRecord::Migration
       t.integer   :round_id
       t.integer   :card_id
       t.integer   :guesser_id
-      t.string    :guess
-      t.string    :status
+      t.string   :guess
+      t.boolean    :status
 
       t.timestamps
     end
