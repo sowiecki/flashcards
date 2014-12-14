@@ -7,7 +7,7 @@
 </div>
 
 <ul>
-  <% session[:cards].each do |card| %>
+  <% @cards.each do |card| %>
     <li> <%= card.question %> </li>
   <% end %>
 </ul>
