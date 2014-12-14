@@ -1,5 +1,6 @@
 get '/deck/:id' do
   @deck = Deck.find(params[:id])
+
   @cards = Card.where(deck_id: params[:id])
   @card_ids = []
   @cards.each do |card|

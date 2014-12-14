@@ -7,7 +7,7 @@ end
 
 get '/deck/:deck_id/card/:card_id/guess/:guess_id' do
   @deck = Deck.find(params[:deck_id])
-  @card = Card.find(params[:card_id])
+  @card = Card.find_by(id: params[:card_id], deck_id: params[:deck_id])
   @guess = Guess.find(params[:guess_id])
   erb :'guess/show'
 end
