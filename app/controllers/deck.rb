@@ -5,9 +5,9 @@ get '/deck/:id' do
   @cards.each do |card|
     @card_ids << card.id
   end
-  session[:card_ids] = @card_ids
+  session[:card_ids] = @card_ids # Only store the card's IDs in the session!
   # @card = Card.where(id: session[:card_ids])
-  card_id = session[:card_ids].first
-  @card = Card.where(id: card_id)
+  @card_id = session[:card_ids].first
+  @card = Card.where(id: @card_id, deck_id: params[:id]).first
   erb :'deck/show'
 end

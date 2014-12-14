@@ -8,7 +8,7 @@
       <h1>Incorrect!</h1>
       <p>The correct answer was <%= @card.answer %></p>
     <% end %>
-    <form action='<%= "/deck/#{@card.deck_id}/card/#{@card.id + 1}" %>' method='get'>
+    <form action='<%= "/deck/#{@deck.id}/card/#{@card.id + 1}" %>' method='get'>
     <input class='button4' type='submit' value='Next Question'>
   </form>
 </div>
