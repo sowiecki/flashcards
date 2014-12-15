@@ -5,7 +5,7 @@
   <% end %>
 <div class='guess_box'>
   <% if @guess.guess != "" %>
-    <p>You guessed "<%= @guess.guess.downcase %>" in response to <%= @card.question %>.<p>
+    <p>"<%= @guess.guess %>" was your response to <%= @card.question %>.<p>
 <%= "<p>The correct answer was #{@card.answer}</p>" unless @guess.status %>
   <% else %>
     <p>You didn't even make a guess, you stupid moron.</p>
