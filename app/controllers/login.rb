@@ -13,3 +13,8 @@ post '/user/:id' do
     erb:'login'
   end
 end
+
+get '/logout' do
+  session[:user] = nil
+  erb :index
+end

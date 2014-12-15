@@ -1,11 +1,9 @@
-<div class="container">
-  <h1>User Landing Page</h1>
-  Welcome <%= "#{@user.name}" %>
-  <h2>List of all decks:</h2>
+<h1>Choose a deck</h1>
+<div class="decks_box">
+  <p>Welcome <%= "#{@user.name}" %>.</p>
+  <p>Please, pick a deck to play:</p>
   <% @decks.each do |deck| %>
-  <a class = "deck_link" href = '/deck/<%= deck.id %>'><%= deck.title %></a>
-
-  <br>
+  <div class="button"><a class="button_link" href='/deck/<%= deck.id %>'><%= deck.title %></a></div>
   <% end %>
-<!-- BACKLOGGED! <h2>History of games played</h2> -->
 </div>
+<!-- BACKLOGGED! <h2>History of games played</h2> -->

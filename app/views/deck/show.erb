@@ -1,14 +1,20 @@
-<div class="container">
-  <h3> You've chosen the <%= @deck.title %> deck.</h3>
-  <div class="reg_box">
-  <form action='/deck/<%= @deck.id %>/card/<%= @card.id %>' method='get'>
-    <input class='button3' type='submit' value='Play'>
-  </form>
-</div>
-
-<ul>
-  <% session[:cards].each do |card| %>
-    <li> <%= card.question %> </li>
-  <% end %>
-</ul>
+<h1><%= @deck.title %> Deck</h1>
+<div class="decks_box">
+  <div id="question">
+    <p>Questions included in this deck:</p>
+    <ul>
+      <% @cards.each do |card| %>
+        <li><%= card.question %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="deck_button">
+    <a class="deck_link" href="/deck/<%= @deck.id %>/card/<%= @card.id %>">Play!</a>
+  </div>
+  <div class="deck_button">
+    <a class="deck_link" href="/user/:id" method="GET">Back</a>
+  </div>
+<!--   <form action='/user/:id' method='GET'>
+    <input class="button1" type="submit" value="LOGIN">
+  </form> -->
 </div>

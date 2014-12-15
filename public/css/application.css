@@ -9,33 +9,35 @@ html, body {
   color: #ffffff;
   background-color: #262626;
 }
+header {
+  margin: 0 0 100px 0;
+  padding: 0 5px 0 5px;
+  background-color: #D1689B;
+}
 h1 {
   padding: 2px;
-  margin: 100px 0 0 0;
+  margin: 0;
   font-size: 40px;
   color: #5fbf74;
   font-family: Impact;
   text-align: center;
 }
-
+h3 {
+  margin: 10px;
+  color: #6DC5D6;
+}
 ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
 }
-
-h3 {
-  margin: 10px;
-  color: #6DC5D6;
-}
 form {
   width: 260px;
-  margin: 2px;
-  padding: 10px 0 0 0;
 }
 input {
   width: 240px;
-  margin: 6px;
+  margin: 10px 6px 6px 6px;
+  outline: 0;
   border-radius: 100px;
   border: 0;
   padding: 6px 6px 6px 10px;
@@ -43,80 +45,112 @@ input {
 th {
   text-align: left;
 }
-
-.deck_link {
-  font-size: 24px;
-  line-height: 40px;
-  color: #FF9C59;
+p {
+  margin: 0 8px 6px 8px;
 }
-
-.box, .login_box, .deck_box {
+.link, .deck_link, .button_link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.link:hover {
+  color: #ffbfde;
+}
+.deck_link {
+  margin: 10px 0 0 0;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+}
+.deck_link:hover {
+  color: #82ecff;
+}
+.button_link {
+  margin: 10px 0 0 0;
+  font-size: 28px;
+  line-height: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+}
+.button_link:hover {
+  color: #82ecff;
+}
+.box, .login_box, .deck_box, .decks_box, .guess_box, .card_box {
   margin: 0 auto auto;
-  padding: 0px 20px 0px 20px;
+  padding: 10px 20px 10px 20px;
+  line-height: 24px;
   border-radius: 8px;
+  text-align: center;
   background: #72e58b;
-  box-shadow: 10px;
+  box-shadow: 2px 2px 0 #7f7f7f;
 }
 .login_box {
-  margin: 0 auto auto;
   width: 300px;
-  height: 200px;
-  text-align: center;
-  padding: 0px 20px 0px 20px;
-  border-radius: 8px;
 }
-
-.reg_box {
-  margin: 0 auto auto;
+.guess_box {
+  width: 400px;
+}
+.card_box {
   width: 300px;
-  height: 100px;
-  text-align: center;
-  padding: 0px 20px 0px 20px;
-  border-radius: 8px;
 }
-
 .deck_box {
-  margin: 0 auto auto;
   width: 600px;
   height: 600px;
-  text-align: center;
-  padding: 20px 20px 20px 20px;
-  border-radius: 8px;
 }
-
-.button1, .button2, .button3, .button4 {
-
+.decks_box {
+  width: 300px;
+}
+.button, .button1, .button2, .button3, .deck_button, .button4, .deck_button {
   margin: 6px;
-  font-size: 30px;
-  width: 140px;
   border-radius: 6px;
   border: 0;
   color: #ffffff;
   background-color: #5fbf74;
 }
+.button:hover, .button1:hover, .button2:hover, .button3:hover, .button4:hover, .deck_button:hover, .deck_button:hover {
+  color: #82ecff;
+  background: #4DC868;
+}
+.button1 {
+  font-size: 30px;
+  width: 140px;
+}
 .button2 {
   font-size: 14px;
+  width: 140px;
 }
-
-
+.deck_button {
+  margin: 0 auto auto;
+  width: 240;
+}
 .button4 {
   font-size: 14px;
   background-color: #FF9C59;
 }
-
-
+#question {
+  margin-top: 10px;
+  text-align: left;
+}
+#correct {
+  color: #7fff9b;
+}
+#incorrect {
+  color: #FF9C59;
+}
 #wrapper {
   min-height:94%;
   text-align: center;
   position: relative;
 }
-#header {
-  padding:10px;
-  background:#5ee;
+#logout {
+  float: right;
 }
 footer {
   width:100%;
-  height:100px;
+
   position:absolute;
   bottom: 0px;
   left:0;

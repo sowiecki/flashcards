@@ -11,6 +11,14 @@
 </head>
 <body>
   <div id="wrapper">
+    <header>
+      <% if session[:user] != nil %>
+        Logged in as: <%= session[:user].name %>
+        <span id="logout"><a class="link" href="/logout" method="POST">Logout</a></span>
+      <% else %>
+        Not logged in
+      <% end %>
+    </header>
     <%= yield %>
     <%= erb :"credits" %>
   </div>
