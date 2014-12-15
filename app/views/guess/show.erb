@@ -1,20 +1,23 @@
-
-<div class="container">
-  <p> You guessed "<%= @guess.guess.downcase %>" in response to <%= @card.question %>.<p>
-  <div class='reg_box'>
-    <% if @guess.status %>
-      <h1>Correct!</h1>
-    <% else %>
-      <h1>Incorrect!</h1>
-      <p>The correct answer was <%= @card.answer %></p>
-    <% end %>
-    <% if Card.find_by(id: (@card.id + 1), deck_id: @deck.id) %>
-      <form action='<%= "/deck/#{@deck.id}/card/#{@card.id + 1}" %>' method='get'>
-        <input class='button4' type='submit' value='Next Question'>
-      </form>
-    <% else %>
-      Finished!
-    <% end %>
-</div>
+  <% if @guess.status %>
+    <h1><span id="correct">Correct!</span></h1>
+  <% else %>
+    <h1><span id="incorrect">Incorrect!</span></h1>
+  <% end %>
+<div class='guess_box'>
+  <% if @guess.guess != "" %>
+    <p>You guessed "<%= @guess.guess.downcase %>" in response to <%= @card.question %>.<p>
+<%= "<p>The correct answer was #{@card.answer}</p>" unless @guess.status %>
+  <% else %>
+    <p>You didn't even make a guess, you stupid moron.</p>
+  <% end %>
+  <% if Card.find_by(id: (@card.id + 1), deck_id: @deck.id) %>
+    <div class="button">
+      <a class="button_link" href="<%= "/deck/#{@deck.id}/card/#{@card.id + 1}" %>">Next Question</a>
+    </div>
+  <% else %>
+    <div class="deck_button">
+      <a class="deck_link" href="/deck/<%= @deck.id %>">Back to deck</a>
+    </div>
+  <% end %>
 </div>
 

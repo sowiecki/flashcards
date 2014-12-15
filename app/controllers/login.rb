@@ -7,3 +7,8 @@ post '/user/:id' do
   @decks = Deck.all
   redirect :'decks/index'
 end
+
+get '/logout' do
+  session[:user] = nil
+  erb :index
+end

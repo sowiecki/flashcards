@@ -1,15 +1,10 @@
-
-<div class="container">
-  <p>Question: <%= @card.question %></p>
-  <div class="reg_box">
+<div class="card_box">
+  <div id="question">
+    <p>Choose an answer for:</p>
+    <p><%= @card.question %></p>
+  </div>
   <form action='/deck/<%= @deck.id %>/card/<%= @card.id %>/guess' method='post'>
     <input type='text' name='guess' placeholder='Answer'>
     <input class='button1' type='submit' value='Guess'>
   </form>
-  <div>
-
-  <%= session[:user].name %>
-<ul>
-
-</ul>
-</div>
+<div>
