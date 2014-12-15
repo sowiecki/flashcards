@@ -1,7 +1,8 @@
 require 'faker'
+require 'bcrypt'
 
 3.times do
-  User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: Faker::Internet.password)
+  User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: BCrypt::Password.create(Faker::Internet.password))
 end
 
 Deck.create!(title: "Bluegills", description: "Learn the last names of the DBC Bluegills.", solved: false, creator_id: 1)
